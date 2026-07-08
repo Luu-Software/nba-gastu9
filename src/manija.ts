@@ -6,6 +6,23 @@ let roster: number[] = [];
 
 export function filtrarPorPosicion(jugadores: number[], posicion: string): number[] {
   let idsFiltrados: number[] = []; // COMPLETAR
+  let cont: number = 0;
+
+  if(posicion==="") {
+  while(cont<jugadores.length){
+      idsFiltrados.push(jugadores[cont])
+    }
+    cont++;
+  }
+  else if (posicion==="G") {
+    while(cont<jugadores.length){
+      idsFiltrados.push(jugadores[cont])
+    }
+    cont++;
+}
+
+
+  
   return idsFiltrados;
 }
 

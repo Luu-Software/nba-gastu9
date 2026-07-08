@@ -18,17 +18,33 @@ export function estaEnRoster(roster: number[], id: number): boolean {
   return esta;
 }
 
+
+
+
+
 export function agregarAlRoster(roster: number[], id: number): number[] {
   let nuevoRoster: number[] = []; // COMPLETAR
+    nuevoRoster = roster; 
+    nuevoRoster.push(id)
+    return nuevoRoster;
 
 
-  return nuevoRoster;
 }
+
+
+
+
+
 
 export function quitarDelRoster(roster: number[], id: number): number[] {
   let nuevoRoster: number[] = []; // COMPLETAR
-
-
+ let cont: number = 0
+ while(cont<roster.length){
+  if(id !== roster[cont]){
+      nuevoRoster.push(roster[cont])
+  }
+  cont++;
+}
   return nuevoRoster;
 }
 
